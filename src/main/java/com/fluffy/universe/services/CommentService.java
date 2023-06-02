@@ -42,7 +42,7 @@ public final class CommentService {
             return connection.createQuery(USER_COMMENTS_BY_POST_ID_SQL)
                     .addParameter("postId", postId).executeAndFetchTable().asList();
         } catch (SQLException throwables) {
-            throw new HttpException(HttpCode.INTERNAL_SERVER_ERROR, "Problem with database connection: " + throwables);
+            throw new HttpException(HttpCode.INTERNAL_SERVER_ERROR, "Problem with database connections: " + throwables);
         }
     }
 
