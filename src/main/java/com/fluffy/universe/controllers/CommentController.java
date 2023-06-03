@@ -24,6 +24,7 @@ public class CommentController extends Controller {
         comment.setParentId(parentId);
         comment.setUserId(userID);
         comment.setPostId(postId);
+        // comment.getId(1);
         comment.setDescription(SecurityUtils.escape(description));
         comment.setPublicationDateTime(LocalDateTime.now());
         CommentService.saveComment(comment);
